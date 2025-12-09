@@ -7,13 +7,38 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 08 Dec 2025 06:10:51 +0800</lastBuildDate><atom:link href="https://blockpapers.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>New1234</title>
-        <link>https://blockpapers.github.io/p/new1234/</link>
-        <pubDate>Mon, 08 Dec 2025 06:10:51 +0800</pubDate>
+        <lastBuildDate>Tue, 09 Dec 2025 17:42:29 +0800</lastBuildDate><atom:link href="https://blockpapers.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Socket编程</title>
+        <link>https://blockpapers.github.io/p/socket%E7%BC%96%E7%A8%8B/</link>
+        <pubDate>Tue, 09 Dec 2025 17:42:29 +0800</pubDate>
         
-        <guid>https://blockpapers.github.io/p/new1234/</guid>
-        <description></description>
+        <guid>https://blockpapers.github.io/p/socket%E7%BC%96%E7%A8%8B/</guid>
+        <description>&lt;h2 id=&#34;网络协议--tcpip&#34;&gt;网络协议 : TCP/IP
+&lt;/h2&gt;&lt;img src=&#34;assets/image-20251209174437508.png&#34; alt=&#34;image-20251209174437508&#34; style=&#34;zoom: 67%;&#34; /&gt;
+&lt;p&gt;1.应用层：为用户提供网络服务&lt;/p&gt;
+&lt;p&gt;2.传输层：在网络中提供端到端的连接，提供可靠的数据传输&lt;/p&gt;
+&lt;p&gt;3.网络层：主要负责网络地址的分配和路由的选择&lt;/p&gt;
+&lt;p&gt;4.数据链路层：主要负责传输数据帧&lt;/p&gt;
+&lt;h2 id=&#34;进程间的通信ipc&#34;&gt;进程间的通信：IPC
+&lt;/h2&gt;&lt;p&gt;1.管道：pipe			本地&lt;/p&gt;
+&lt;p&gt;2.信号：signal		     本地&lt;/p&gt;
+&lt;p&gt;3.信号量：semaphore		本地&lt;/p&gt;
+&lt;p&gt;4.消息队列：message		本地&lt;/p&gt;
+&lt;p&gt;5.共享内存：share memory	   本地&lt;/p&gt;
+&lt;p&gt;6.套接字：socket		支持不同设备远程通信&lt;/p&gt;
+&lt;h2 id=&#34;tcp的socket通信流程&#34;&gt;TCP的socket通信流程
+&lt;/h2&gt;&lt;img src=&#34;assets/image-20251209181933073.png&#34; alt=&#34;image-20251209181933073&#34; style=&#34;zoom:67%;&#34; /&gt;
+&lt;p&gt;1.服务端和客户端初始化Socket（套接字），得到文件描述符
+2.服务端调用bind，绑定IP和端口
+3.服务端调用listen，进行监听	websocket/80	https/443
+4.服务端调用accept，等待客户端连接
+5.客户端调用connect，向服务端发起连接请求。（TCP三次握手）
+6.服务端调用accept返回用于传输的Socket的文件描述符（和第一点得到的Socket不同）
+7.客户端使用write写入数据，服务端调用read读取数据
+8.客户端断开连接时会调用close，服务端也会调用close（TCP四次挥手）&lt;/p&gt;
+&lt;p&gt;这里要注意的是，调用accept，连接成功得到的Socket是用来传输数据的，而第一次初始化Socket是用来监听的，是两个不同作用的Socket。&lt;/p&gt;
+&lt;p&gt;参考资料：https://blog.csdn.net/OYMNCHR/article/details/124728256&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Chinese Test</title>
@@ -447,41 +472,6 @@ $$</description>
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>Links</title>
-        <link>https://blockpapers.github.io/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blockpapers.github.io/links/</guid>
-        <description>&lt;p&gt;To use this feature, add &lt;code&gt;links&lt;/code&gt; section to frontmatter.&lt;/p&gt;
-&lt;p&gt;This page&amp;rsquo;s frontmatter:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;links&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;GitHub is the world&amp;#39;s largest software development platform.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.com&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;title&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;description&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;website&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;https://www.typescriptlang.org&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ts-logo-128.jpg&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;image&lt;/code&gt; field accepts both local and external images.&lt;/p&gt;
-</description>
-        </item>
-        <item>
         <title>Search</title>
         <link>https://blockpapers.github.io/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -497,6 +487,14 @@ $$</description>
         <guid>https://blockpapers.github.io/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
 </description>
+        </item>
+        <item>
+        <title>技术链接</title>
+        <link>https://blockpapers.github.io/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blockpapers.github.io/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</guid>
+        <description></description>
         </item>
         
     </channel>

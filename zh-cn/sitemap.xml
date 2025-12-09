@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blockpapers.github.io/</loc>
-    <lastmod>2025-12-08T06:10:51+08:00</lastmod>
+    <lastmod>2025-12-09T17:42:29+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -15,11 +15,8 @@
                 href="https://blockpapers.github.io/"
                 />
   </url><url>
-    <loc>https://blockpapers.github.io/p/new1234/</loc>
-    <lastmod>2025-12-08T06:10:51+08:00</lastmod>
-  </url><url>
     <loc>https://blockpapers.github.io/post/</loc>
-    <lastmod>2025-12-08T06:10:51+08:00</lastmod>
+    <lastmod>2025-12-09T17:42:29+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -30,6 +27,9 @@
                 hreflang="zh-cn"
                 href="https://blockpapers.github.io/post/"
                 />
+  </url><url>
+    <loc>https://blockpapers.github.io/p/socket%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2025-12-09T17:42:29+08:00</lastmod>
   </url><url>
     <loc>https://blockpapers.github.io/categories/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
@@ -144,10 +144,10 @@
     <loc>https://blockpapers.github.io/p/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blockpapers.github.io/links/</loc>
-  </url><url>
     <loc>https://blockpapers.github.io/search/</loc>
   </url><url>
     <loc>https://blockpapers.github.io/%E5%85%B3%E4%BA%8E/</loc>
+  </url><url>
+    <loc>https://blockpapers.github.io/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</loc>
   </url>
 </urlset>
