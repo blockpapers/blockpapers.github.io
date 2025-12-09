@@ -7,7 +7,63 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Tue, 09 Dec 2025 17:42:29 +0800</lastBuildDate><atom:link href="https://blockpapers.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 09 Dec 2025 20:29:09 +0800</lastBuildDate><atom:link href="https://blockpapers.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Bootloader</title>
+        <link>https://blockpapers.github.io/p/bootloader/</link>
+        <pubDate>Tue, 09 Dec 2025 20:29:09 +0800</pubDate>
+        
+        <guid>https://blockpapers.github.io/p/bootloader/</guid>
+        <description>&lt;p&gt;STM32编程方式：&lt;/p&gt;
+&lt;p&gt;1.在线编程（ICP，In-Circuit Programming）：用户通过烧录器将用户应用程序下载到flash中&lt;/p&gt;
+&lt;p&gt;2.在程序中编程（IAP In Application Programming）：在应用程序中重新烧录程序&lt;/p&gt;
+&lt;img src=&#34;assets/image-20251209203625976.png&#34; alt=&#34;image-20251209203625976&#34; style=&#34;zoom:67%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; STM32的内部闪存（FLASH）地址起始于0x08000000，一般情况下，程序文件就从此地址开始写入。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 0x08000004开始存放中断向量表。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 当中断来临，STM32的内部硬件机制亦会自动将PC指针定位到“中断向量表”处，并根据中断源取出对应的中断向量执行中断服务程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; STM32复位后，从0X08000004地址取出复位中断向量的地址，并跳转到复位中断服务程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 在复位中断服务程序执行完之后，会跳转到我们的main函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; main函数执行过程中，如果收到中断请求（发生重中断），此时STM32强制将PC指针指回中断向量表处。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 根据中断源进入相应的中断服务程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 在执行完中断服务程序以后，程序再次返回main函数执行&lt;/p&gt;
+&lt;img src=&#34;assets/image-20251209204448982.png&#34; alt=&#34;image-20251209204448982&#34; style=&#34;zoom:67%;&#34; /&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; STM32复位后，还是从0X08000004地址取出复位中断向量的地址并跳转到复位中断服务程序，在运行完复位中断服务程序之后跳转到IAP的main函数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 在执行完IAP以后（即将新的APP代码写入STM32的FLASH，灰底部分。新程序的复位中断向量起始地址为0X08000004+N+M），跳转至新写入程序的复位向量表，取出新程序的复位中断向量的地址，并跳转执行新程序的复位中断服务程序，随后跳转至新程序的main函数如图标号②和③所示&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 在main函数执行过程中，如果CPU得到一个中断请求，PC指针仍强制跳转到地址0X08000004中断向量表处，而不是新程序的中断向量表&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 程序再根据我们设置的中断向量表偏移量，跳转到对应中断源新的中断服务程序中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 在执行完中断服务程序后，程序返回main函数继续运行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;栈地址由高到低&lt;/p&gt;
+&lt;p&gt;堆地址由低到高&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Socket编程</title>
         <link>https://blockpapers.github.io/p/socket%E7%BC%96%E7%A8%8B/</link>
         <pubDate>Tue, 09 Dec 2025 17:42:29 +0800</pubDate>
