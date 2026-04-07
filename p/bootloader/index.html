@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="STM32编程方式：\n1.在线编程（ICP，In-Circuit Programming）：用户通过烧录器将用户应用程序下载到flash中\n2.在程序中编程（IAP In Application Programming）：在应用程序中重新烧录程序\nSTM32的内部闪存（FLASH）地址起始于0x08000000，一般情况下，程序文件就从此地址开始写入。\n0x08000004开始存放中断向量表。\n当中断来临，STM32的内部硬件机制亦会自动将PC指针定位到“中断向量表”处，并根据中断源取出对应的中断向量执行中断服务程序\nSTM32复位后，从0X08000004地址取出复位中断向量的地址，并跳转到复位中断服务程序\n在复位中断服务程序执行完之后，会跳转到我们的main函数\nmain函数执行过程中，如果收到中断请求（发生重中断），此时STM32强制将PC指针指回中断向量表处。\n根据中断源进入相应的中断服务程序\n在执行完中断服务程序以后，程序再次返回main函数执行\nSTM32复位后，还是从0X08000004地址取出复位中断向量的地址并跳转到复位中断服务程序，在运行完复位中断服务程序之后跳转到IAP的main函数。\n在执行完IAP以后（即将新的APP代码写入STM32的FLASH，灰底部分。新程序的复位中断向量起始地址为0X08000004+N+M），跳转至新写入程序的复位向量表，取出新程序的复位中断向量的地址，并跳转执行新程序的复位中断服务程序，随后跳转至新程序的main函数如图标号②和③所示\n在main函数执行过程中，如果CPU得到一个中断请求，PC指针仍强制跳转到地址0X08000004中断向量表处，而不是新程序的中断向量表\n程序再根据我们设置的中断向量表偏移量，跳转到对应中断源新的中断服务程序中\n在执行完中断服务程序后，程序返回main函数继续运行。\n栈地址由高到低\n堆地址由低到高\n">
 <title>Bootloader</title>
@@ -58,7 +58,7 @@
                     
                     
                         
-                        <img src="/img/avatar_hu_3b602574690d97b9.png" width="300"
+                        <img src="/img/avatar_hu_b3e91363bf370912.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -435,7 +435,7 @@
         
             2024 - 
         
-        2025 Example Person
+        2026 Example Person
     </section>
     
     <section class="powerby">
