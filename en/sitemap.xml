@@ -2,40 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blockpapers.github.io/en/categories/</loc>
+    <loc>/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blockpapers.github.io/en/categories/"
+                href="/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://blockpapers.github.io/categories/"
+                href="/categories/"
                 />
   </url><url>
-    <loc>https://blockpapers.github.io/en/</loc>
+    <loc>/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blockpapers.github.io/en/"
+                href="/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://blockpapers.github.io/"
+                href="/"
                 />
   </url><url>
-    <loc>https://blockpapers.github.io/en/tags/</loc>
+    <loc>/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://blockpapers.github.io/en/tags/"
+                href="/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="https://blockpapers.github.io/tags/"
+                href="/tags/"
                 />
   </url>
 </urlset>

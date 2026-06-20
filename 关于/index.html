@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="This is a test page for i18n support.\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="嵌入式软件工程师">
 <title>关于</title>
 
-<link rel='canonical' href='https://blockpapers.github.io/%E5%85%B3%E4%BA%8E/'>
+<link rel='canonical' href='/%E5%85%B3%E4%BA%8E/'>
 
-<link rel="stylesheet" href="/scss/style.min.f4ab301160f861f446d31307ac777e3453804645bf4feaba76f74e0488b1c23a.css"><meta property='og:title' content="关于">
-<meta property='og:description' content="This is a test page for i18n support.\n">
-<meta property='og:url' content='https://blockpapers.github.io/%E5%85%B3%E4%BA%8E/'>
+<link rel="stylesheet" href="/scss/style.min.fe5bc084e00ac4c1699fda406421394890d873332bdb56d3292900211fb8060a.css"><meta property='og:title' content="关于">
+<meta property='og:description' content="嵌入式软件工程师">
+<meta property='og:url' content='/%E5%85%B3%E4%BA%8E/'>
 <meta property='og:site_name' content='张工的知识库'>
 <meta property='og:type' content='article'><meta property='article:section' content='Page' />
 <meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="This is a test page for i18n support.\n">
+<meta name="twitter:description" content="嵌入式软件工程师">
     <link rel="shortcut icon" href="/favicon1.ico" />
 
     </head>
@@ -174,7 +174,7 @@
 
 
                 
-                <span>Archives</span>
+                <span>归档</span>
             </a>
         </li>
         
@@ -233,9 +233,9 @@
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="https://blockpapers.github.io/en/" >English</option>
+                                    <option value="/en/" >English</option>
                                 
-                                    <option value="https://blockpapers.github.io/" selected>中文</option>
+                                    <option value="/" selected>中文</option>
                                 
                             </select>
                         </li>
@@ -283,6 +283,10 @@
         </h2>
     
         
+        <h3 class="article-subtitle">
+            嵌入式软件工程师
+        </h3>
+        
     </div>
 
     
@@ -298,7 +302,9 @@
     <section class="article-content">
     
     
-    <p>This is a test page for i18n support.</p>
+    <h2 id="关于我">关于我
+</h2><p>嵌入式软件工程师，专注于嵌入式系统开发、RTOS、Bootloader、网络编程等底层技术方向。</p>
+<p>这个博客是我日常开发和调试过程中的笔记沉淀。</p>
 
 </section>
 
@@ -318,8 +324,6 @@
 
      
     
-        
-    
 
     <footer class="site-footer">
     <section class="copyright">
@@ -331,6 +335,8 @@
     </section>
     
     <section class="powerby">
+        
+            记录嵌入式开发的点滴 <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.32.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
@@ -432,6 +438,31 @@
 
         document.head.appendChild(customFont);
     }());
+</script>
+<script>
+(function() {
+  
+  const bar = document.createElement('div');
+  bar.className = 'reading-progress';
+  document.body.prepend(bar);
+  
+  function updateBar() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight > 0) {
+      const progress = Math.min(scrollTop / docHeight * 100, 100);
+      bar.style.width = progress + '%';
+    }
+  }
+  
+  
+  if (document.body.classList.contains('article-page')) {
+    window.addEventListener('scroll', updateBar, { passive: true });
+    updateBar();
+  } else {
+    bar.remove();
+  }
+})();
 </script>
 
     </body>

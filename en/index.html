@@ -5,15 +5,15 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Embedded systems and programming notes">
 <title>Example Site</title>
 
-<link rel='canonical' href='https://blockpapers.github.io/en/'>
+<link rel='canonical' href='/en/'>
 
-<link rel="stylesheet" href="/scss/style.min.f4ab301160f861f446d31307ac777e3453804645bf4feaba76f74e0488b1c23a.css"><meta property='og:title' content="Example Site">
+<link rel="stylesheet" href="/scss/style.min.fe5bc084e00ac4c1699fda406421394890d873332bdb56d3292900211fb8060a.css"><meta property='og:title' content="Example Site">
 <meta property='og:description' content="Embedded systems and programming notes">
-<meta property='og:url' content='https://blockpapers.github.io/en/'>
+<meta property='og:url' content='/en/'>
 <meta property='og:site_name' content='Example Site'>
 <meta property='og:type' content='website'>
 <meta name="twitter:title" content="Example Site">
-<meta name="twitter:description" content="Embedded systems and programming notes"><link rel="alternate" type="application/rss&#43;xml" href="https://blockpapers.github.io/en/index.xml">
+<meta name="twitter:description" content="Embedded systems and programming notes"><link rel="alternate" type="application/rss&#43;xml" href="/en/index.xml">
     <link rel="shortcut icon" href="/favicon1.ico" />
 
     </head>
@@ -70,7 +70,7 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/en">Example Site</a></h1>
+            <h1 class="site-name"><a href="/en/">Example Site</a></h1>
             <h2 class="site-description">Embedded systems and programming notes</h2>
         </div>
     </header><ol class="menu-social">
@@ -135,9 +135,9 @@
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="https://blockpapers.github.io/en/" selected>English</option>
+                                    <option value="/en/" selected>English</option>
                                 
-                                    <option value="https://blockpapers.github.io/" >中文</option>
+                                    <option value="/" >中文</option>
                                 
                             </select>
                         </li>
@@ -235,14 +235,15 @@
 
     <section class="home-hero">
         <div class="home-hero__content">
-            <span class="home-hero__eyebrow">Embedded Notes</span>
-            <h1>把调试、移植和工程经验沉淀成可复用的知识库。</h1>
+            <span class="home-hero__eyebrow">张工的知识库</span>
+            <h1>把调试、移植和工程经验沉淀成可复用的知识库</h1>
             <p class="home-hero__summary">
-                聚焦嵌入式系统、RTOS、Bootloader、网络编程与常用开发工具，记录从问题定位到工程落地的关键路径。
+                聚焦嵌入式系统、RTOS、Bootloader、网络编程与常用开发工具，记录从问题定位到工程落地的完整路径。
             </p>
             <div class="home-hero__actions">
-                <a href="/en/archives/">浏览归档 →</a>
+                <a href="/en/archives/">浏览归档</a>
                 <a href="/en/search/">搜索笔记</a>
+                <a href="/en/page/about/">关于我</a>
             </div>
         </div>
 
@@ -253,7 +254,7 @@
             </div>
             <div>
                 <span class="home-hero__metric">0</span>
-                <span class="home-hero__label">个技术标签</span>
+                <span class="home-hero__label">总文章数</span>
             </div>
             <div>
                 
@@ -263,8 +264,8 @@
 
     <section class="home-section-heading">
         <div>
-            <p>Latest Articles</p>
-            <h2>最近整理</h2>
+            <p>Technical Notes</p>
+            <h2>最新文章</h2>
         </div>
         <a href="/en/archives/">全部文章 →</a>
     </section>
@@ -282,6 +283,8 @@
     </section>
     
     <section class="powerby">
+        
+            记录嵌入式开发的点滴 <br/>
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.32.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
@@ -304,6 +307,31 @@
 
         document.head.appendChild(customFont);
     }());
+</script>
+<script>
+(function() {
+  
+  const bar = document.createElement('div');
+  bar.className = 'reading-progress';
+  document.body.prepend(bar);
+  
+  function updateBar() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight > 0) {
+      const progress = Math.min(scrollTop / docHeight * 100, 100);
+      bar.style.width = progress + '%';
+    }
+  }
+  
+  
+  if (document.body.classList.contains('article-page')) {
+    window.addEventListener('scroll', updateBar, { passive: true });
+    updateBar();
+  } else {
+    bar.remove();
+  }
+})();
 </script>
 
     </body>

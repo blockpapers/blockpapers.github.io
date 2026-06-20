@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Codex on 张工的知识库</title>
-        <link>https://blockpapers.github.io/tags/codex/</link>
+        <link>/tags/codex/</link>
         <description>Recent content in Codex on 张工的知识库</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>张工</copyright>
-        <lastBuildDate>Sat, 20 Jun 2026 18:00:00 +0800</lastBuildDate><atom:link href="https://blockpapers.github.io/tags/codex/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 20 Jun 2026 18:00:00 +0800</lastBuildDate><atom:link href="/tags/codex/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>保姆级教程 | CC Switch 让 Codex 自由换模型</title>
-        <link>https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/</link>
+        <link>/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/</link>
         <pubDate>Sat, 20 Jun 2026 18:00:00 +0800</pubDate>
         
-        <guid>https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/</guid>
-        <description>&lt;img src="https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg" alt="Featured image of post 保姆级教程 | CC Switch 让 Codex 自由换模型" /&gt;&lt;p&gt;Codex 现在热度很高，用的人不少，毕竟封号没像另外一家频繁，但对于重度用户来说，额度和成本依然是绕不开的问题。&lt;/p&gt;
+        <guid>/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/</guid>
+        <description>&lt;img src="/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg" alt="Featured image of post 保姆级教程 | CC Switch 让 Codex 自由换模型" /&gt;&lt;p&gt;Codex 现在热度很高，用的人不少，毕竟封号没像另外一家频繁，但对于重度用户来说，额度和成本依然是绕不开的问题。&lt;/p&gt;
 &lt;p&gt;之前配置接入第三方模型也不方便，现在好了，第三方工具 &lt;strong&gt;CC Switch v3.16.0&lt;/strong&gt; 更新后，已经可以很方便的把第三方模型接入 Codex。&lt;/p&gt;
 &lt;p&gt;CC Switch 是一款免费开源的跨平台桌面工具，它能够在本地接管 Codex 等 AI 编程助手的请求，并将请求转发到你指定的 API 提供商，实现模型自由切换。&lt;/p&gt;
 &lt;p&gt;通过 CC Switch，你可以让 Codex 直接使用 &lt;strong&gt;DeepSeek、Qwen、智谱 GLM&lt;/strong&gt; 等第三方大模型作为后端服务，在保留 Codex 使用体验的同时，大幅降低使用成本，并获得更多模型选择。&lt;/p&gt;
@@ -29,10 +29,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Codex → CC Switch → DeepSeek/Qwen/GLM → CC Switch → Codex
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;720&#34;
-	srcset=&#34;https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_18ad5b335e467016.jpg 480w, https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_85c787112894a967.jpg 1024w&#34;
+	srcset=&#34;/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_18ad5b335e467016.jpg 480w, /p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_85c787112894a967.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;CC Switch 工作流程&#34;

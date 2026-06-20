@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="网络协议 : TCP/IP 1.应用层：为用户提供网络服务\n2.传输层：在网络中提供端到端的连接，提供可靠的数据传输\n3.网络层：主要负责网络地址的分配和路由的选择\n4.数据链路层：主要负责传输数据帧\n">
-<title>Socket编程</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="STM32编程方式：\n1.在线编程（ICP，In-Circuit Programming）：用户通过烧录器将用户应用程序下载到flash中\n2.在程序中编程（IAP In Application Programming）：在应用程序中重新烧录程序\n">
+<title>Bootloader 与 IAP 原理详解</title>
 
-<link rel='canonical' href='https://blockpapers.github.io/p/socket%E7%BC%96%E7%A8%8B/'>
+<link rel='canonical' href='/p/bootloader-%E4%B8%8E-iap-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3/'>
 
-<link rel="stylesheet" href="/scss/style.min.f4ab301160f861f446d31307ac777e3453804645bf4feaba76f74e0488b1c23a.css"><meta property='og:title' content="Socket编程">
-<meta property='og:description' content="网络协议 : TCP/IP 1.应用层：为用户提供网络服务\n2.传输层：在网络中提供端到端的连接，提供可靠的数据传输\n3.网络层：主要负责网络地址的分配和路由的选择\n4.数据链路层：主要负责传输数据帧\n">
-<meta property='og:url' content='https://blockpapers.github.io/p/socket%E7%BC%96%E7%A8%8B/'>
+<link rel="stylesheet" href="/scss/style.min.fe5bc084e00ac4c1699fda406421394890d873332bdb56d3292900211fb8060a.css"><meta property='og:title' content="Bootloader 与 IAP 原理详解">
+<meta property='og:description' content="STM32编程方式：\n1.在线编程（ICP，In-Circuit Programming）：用户通过烧录器将用户应用程序下载到flash中\n2.在程序中编程（IAP In Application Programming）：在应用程序中重新烧录程序\n">
+<meta property='og:url' content='/p/bootloader-%E4%B8%8E-iap-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3/'>
 <meta property='og:site_name' content='张工的知识库'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-09T17:42:29&#43;08:00'/><meta property='article:modified_time' content='2025-12-09T17:42:29&#43;08:00'/>
-<meta name="twitter:title" content="Socket编程">
-<meta name="twitter:description" content="网络协议 : TCP/IP 1.应用层：为用户提供网络服务\n2.传输层：在网络中提供端到端的连接，提供可靠的数据传输\n3.网络层：主要负责网络地址的分配和路由的选择\n4.数据链路层：主要负责传输数据帧\n">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-09T20:29:09&#43;08:00'/><meta property='article:modified_time' content='2025-12-09T20:29:09&#43;08:00'/>
+<meta name="twitter:title" content="Bootloader 与 IAP 原理详解">
+<meta name="twitter:description" content="STM32编程方式：\n1.在线编程（ICP，In-Circuit Programming）：用户通过烧录器将用户应用程序下载到flash中\n2.在程序中编程（IAP In Application Programming）：在应用程序中重新烧录程序\n">
     <link rel="shortcut icon" href="/favicon1.ico" />
 
     </head>
@@ -174,7 +174,7 @@
 
 
                 
-                <span>Archives</span>
+                <span>归档</span>
             </a>
         </li>
         
@@ -233,9 +233,9 @@
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="https://blockpapers.github.io/en/" >English</option>
+                                    <option value="/en/" >English</option>
                                 
-                                    <option value="https://blockpapers.github.io/" selected>中文</option>
+                                    <option value="/" selected>中文</option>
                                 
                             </select>
                         </li>
@@ -268,40 +268,7 @@
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">目录</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#网络协议--tcpip">网络协议 : TCP/IP</a></li>
-    <li><a href="#进程间的通信ipc">进程间的通信：IPC</a></li>
-    <li><a href="#tcp的socket通信流程">TCP的socket通信流程</a></li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
+    
 
             <main class="main full-width">
     <article class="main-article">
@@ -312,7 +279,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/socket%E7%BC%96%E7%A8%8B/">Socket编程</a>
+            <a href="/p/bootloader-%E4%B8%8E-iap-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3/">Bootloader 与 IAP 原理详解</a>
         </h2>
     
         
@@ -334,7 +301,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published" datetime='2025-12-09T17:42:29&#43;08:00'>2025-12-09</time>
+                <time class="article-time--published" datetime='2025-12-09T20:29:09&#43;08:00'>2025-12-09</time>
             </div>
         
 
@@ -350,31 +317,54 @@
     <section class="article-content">
     
     
-    <h2 id="网络协议--tcpip">网络协议 : TCP/IP
-</h2><img src="assets/image-20251209174437508.png" alt="image-20251209174437508" style="zoom: 67%;" />
-<p>1.应用层：为用户提供网络服务</p>
-<p>2.传输层：在网络中提供端到端的连接，提供可靠的数据传输</p>
-<p>3.网络层：主要负责网络地址的分配和路由的选择</p>
-<p>4.数据链路层：主要负责传输数据帧</p>
-<h2 id="进程间的通信ipc">进程间的通信：IPC
-</h2><p>1.管道：pipe			本地</p>
-<p>2.信号：signal		     本地</p>
-<p>3.信号量：semaphore		本地</p>
-<p>4.消息队列：message		本地</p>
-<p>5.共享内存：share memory	   本地</p>
-<p>6.套接字：socket		支持不同设备远程通信</p>
-<h2 id="tcp的socket通信流程">TCP的socket通信流程
-</h2><img src="assets/image-20251209181933073.png" alt="image-20251209181933073" style="zoom:67%;" />
-<p>1.服务端和客户端初始化Socket（套接字），得到文件描述符
-2.服务端调用bind，绑定IP和端口
-3.服务端调用listen，进行监听	websocket/80	https/443
-4.服务端调用accept，等待客户端连接
-5.客户端调用connect，向服务端发起连接请求。（TCP三次握手）
-6.服务端调用accept返回用于传输的Socket的文件描述符（和第一点得到的Socket不同）
-7.客户端使用write写入数据，服务端调用read读取数据
-8.客户端断开连接时会调用close，服务端也会调用close（TCP四次挥手）</p>
-<p>这里要注意的是，调用accept，连接成功得到的Socket是用来传输数据的，而第一次初始化Socket是用来监听的，是两个不同作用的Socket。</p>
-<p>参考资料：https://blog.csdn.net/OYMNCHR/article/details/124728256</p>
+    <p>STM32编程方式：</p>
+<p>1.在线编程（ICP，In-Circuit Programming）：用户通过烧录器将用户应用程序下载到flash中</p>
+<p>2.在程序中编程（IAP In Application Programming）：在应用程序中重新烧录程序</p>
+<img src="assets/image-20251209203625976.png" alt="image-20251209203625976" style="zoom:67%;" />
+<ul>
+<li>
+<p><input disabled="" type="checkbox"> STM32的内部闪存（FLASH）地址起始于0x08000000，一般情况下，程序文件就从此地址开始写入。</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 0x08000004开始存放中断向量表。</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 当中断来临，STM32的内部硬件机制亦会自动将PC指针定位到“中断向量表”处，并根据中断源取出对应的中断向量执行中断服务程序</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> STM32复位后，从0X08000004地址取出复位中断向量的地址，并跳转到复位中断服务程序</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 在复位中断服务程序执行完之后，会跳转到我们的main函数</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> main函数执行过程中，如果收到中断请求（发生重中断），此时STM32强制将PC指针指回中断向量表处。</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 根据中断源进入相应的中断服务程序</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 在执行完中断服务程序以后，程序再次返回main函数执行</p>
+<img src="assets/image-20251209204448982.png" alt="image-20251209204448982" style="zoom:67%;" />
+</li>
+<li>
+<p><input disabled="" type="checkbox"> STM32复位后，还是从0X08000004地址取出复位中断向量的地址并跳转到复位中断服务程序，在运行完复位中断服务程序之后跳转到IAP的main函数。</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 在执行完IAP以后（即将新的APP代码写入STM32的FLASH，灰底部分。新程序的复位中断向量起始地址为0X08000004+N+M），跳转至新写入程序的复位向量表，取出新程序的复位中断向量的地址，并跳转执行新程序的复位中断服务程序，随后跳转至新程序的main函数如图标号②和③所示</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 在main函数执行过程中，如果CPU得到一个中断请求，PC指针仍强制跳转到地址0X08000004中断向量表处，而不是新程序的中断向量表</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 程序再根据我们设置的中断向量表偏移量，跳转到对应中断源新的中断服务程序中</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"> 在执行完中断服务程序后，程序返回main函数继续运行。</p>
+</li>
+</ul>
+<p>栈地址由高到低</p>
+<p>堆地址由低到高</p>
 
 </section>
 
@@ -407,6 +397,8 @@
     </section>
     
     <section class="powerby">
+        
+            记录嵌入式开发的点滴 <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.32.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
@@ -508,6 +500,31 @@
 
         document.head.appendChild(customFont);
     }());
+</script>
+<script>
+(function() {
+  
+  const bar = document.createElement('div');
+  bar.className = 'reading-progress';
+  document.body.prepend(bar);
+  
+  function updateBar() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight > 0) {
+      const progress = Math.min(scrollTop / docHeight * 100, 100);
+      bar.style.width = progress + '%';
+    }
+  }
+  
+  
+  if (document.body.classList.contains('article-page')) {
+    window.addEventListener('scroll', updateBar, { passive: true });
+    updateBar();
+  } else {
+    bar.remove();
+  }
+})();
 </script>
 
     </body>

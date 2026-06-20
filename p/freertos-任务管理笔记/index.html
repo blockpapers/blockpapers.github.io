@@ -2,16 +2,16 @@
 <html lang="en-us" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="第9讲 任务的创建 一.创建任务\n1.动态创建任务\txTaskCreate()\t任务的任务控制块以及任务的栈空间所需的内存，均由FreeRTos从管理的堆中分配\n2.静态创建任务\txTaskCreateStatic() 任务的任务控制块以及任务的栈空间所需的内存，需由用户分配\n">
-<title>Freertos</title>
+<title>FreeRTOS 任务管理笔记</title>
 
-<link rel='canonical' href='https://blockpapers.github.io/p/freertos/'>
+<link rel='canonical' href='/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/'>
 
-<link rel="stylesheet" href="/scss/style.min.f4ab301160f861f446d31307ac777e3453804645bf4feaba76f74e0488b1c23a.css"><meta property='og:title' content="Freertos">
+<link rel="stylesheet" href="/scss/style.min.fe5bc084e00ac4c1699fda406421394890d873332bdb56d3292900211fb8060a.css"><meta property='og:title' content="FreeRTOS 任务管理笔记">
 <meta property='og:description' content="第9讲 任务的创建 一.创建任务\n1.动态创建任务\txTaskCreate()\t任务的任务控制块以及任务的栈空间所需的内存，均由FreeRTos从管理的堆中分配\n2.静态创建任务\txTaskCreateStatic() 任务的任务控制块以及任务的栈空间所需的内存，需由用户分配\n">
-<meta property='og:url' content='https://blockpapers.github.io/p/freertos/'>
+<meta property='og:url' content='/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/'>
 <meta property='og:site_name' content='张工的知识库'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-12-16T22:29:03&#43;08:00'/><meta property='article:modified_time' content='2025-12-16T22:29:03&#43;08:00'/>
-<meta name="twitter:title" content="Freertos">
+<meta name="twitter:title" content="FreeRTOS 任务管理笔记">
 <meta name="twitter:description" content="第9讲 任务的创建 一.创建任务\n1.动态创建任务\txTaskCreate()\t任务的任务控制块以及任务的栈空间所需的内存，均由FreeRTos从管理的堆中分配\n2.静态创建任务\txTaskCreateStatic() 任务的任务控制块以及任务的栈空间所需的内存，需由用户分配\n">
     <link rel="shortcut icon" href="/favicon1.ico" />
 
@@ -174,7 +174,7 @@
 
 
                 
-                <span>Archives</span>
+                <span>归档</span>
             </a>
         </li>
         
@@ -233,9 +233,9 @@
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="https://blockpapers.github.io/en/" >English</option>
+                                    <option value="/en/" >English</option>
                                 
-                                    <option value="https://blockpapers.github.io/" selected>中文</option>
+                                    <option value="/" selected>中文</option>
                                 
                             </select>
                         </li>
@@ -333,7 +333,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/freertos/">Freertos</a>
+            <a href="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/">FreeRTOS 任务管理笔记</a>
         </h2>
     
         
@@ -377,10 +377,10 @@
 <p>2.静态创建任务	xTaskCreateStatic()  任务的任务控制块以及任务的栈空间所需的内存，需由用户分配</p>
 <p>3.删除任务		vTaskDelete()</p>
 <p>动态创建函数</p>
-<p><img src="/p/freertos/assets/image-20251216223548513.png"
+<p><img src="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251216223548513.png"
 	width="1802"
 	height="454"
-	srcset="/p/freertos/assets/image-20251216223548513_hu_d878e41416a14a42.png 480w, /p/freertos/assets/image-20251216223548513_hu_886b812b549ed4ba.png 1024w"
+	srcset="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251216223548513_hu_d878e41416a14a42.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251216223548513_hu_886b812b549ed4ba.png 1024w"
 	loading="lazy"
 	
 		alt="image-20251216223548513"
@@ -435,10 +435,10 @@
 <p><strong>第二层：FreeRTOS 托管区（优先级 5 - 14）—— 老师说的就是这里 含义：中等优先级范围。 特点：这些中断可以被 FreeRTOS 的“临界区”机制屏蔽（Mask）。 规则：可以安全地调用以 FromISR 结尾的 API 函数（如 xQueueSendFromISR）。 原理：当 FreeRTOS 需要保护核心数据结构时，它会把 CPU 的中断屏蔽寄存器（BASEPRI）设为 5。这意味着，优先级在 5 到 15 的中断暂时会被“关”在外面，直到 FreeRTOS 处理完数据。</strong></p>
 <p><strong>第三层：内核地板区（优先级 15） 含义：最低优先级。 谁在这里：FreeRTOS 的 PendSV（任务切换）和 SysTick（时钟节拍）。 规则：这是内核干活的地方。</strong></p>
 <h3 id="第14讲-任务挂起与恢复实验">第14讲 任务挂起与恢复实验
-</h3><p><img src="/p/freertos/assets/image-20251223000242002.png"
+</h3><p><img src="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223000242002.png"
 	width="1614"
 	height="590"
-	srcset="/p/freertos/assets/image-20251223000242002_hu_bd564d3ba6807ecf.png 480w, /p/freertos/assets/image-20251223000242002_hu_6ca4c6bfeb590994.png 1024w"
+	srcset="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223000242002_hu_bd564d3ba6807ecf.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223000242002_hu_6ca4c6bfeb590994.png 1024w"
 	loading="lazy"
 	
 		alt="image-20251223000242002"
@@ -453,10 +453,10 @@
 <p>2.中断处理函数的抢占优先级要小于或等于freeRtos所管理的最大优先级（5-15）</p>
 <h3 id="第15讲-任务挂起与恢复函数实现的详细过程">第15讲 任务挂起与恢复函数实现的详细过程
 </h3><h4 id="1任务挂起流程图--vtasksuspend">1.任务挂起流程图  vTaskSuspend()
-</h4><p><img src="/p/freertos/assets/image-20251223014059901.png"
+</h4><p><img src="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223014059901.png"
 	width="1602"
 	height="408"
-	srcset="/p/freertos/assets/image-20251223014059901_hu_db29903f4644cf11.png 480w, /p/freertos/assets/image-20251223014059901_hu_18f5afee3cc21d88.png 1024w"
+	srcset="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223014059901_hu_db29903f4644cf11.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223014059901_hu_18f5afee3cc21d88.png 1024w"
 	loading="lazy"
 	
 		alt="image-20251223014059901"
@@ -468,10 +468,10 @@
 	
 ></p>
 <h4 id="2任务恢复函数详情vtaskresume">2.任务恢复函数详情	vTaskResume()
-</h4><p><img src="/p/freertos/assets/image-20251223042849103.png"
+</h4><p><img src="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223042849103.png"
 	width="1005"
 	height="184"
-	srcset="/p/freertos/assets/image-20251223042849103_hu_9aa9f64f882d17d0.png 480w, /p/freertos/assets/image-20251223042849103_hu_cc39212ced31f2e5.png 1024w"
+	srcset="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223042849103_hu_9aa9f64f882d17d0.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223042849103_hu_cc39212ced31f2e5.png 1024w"
 	loading="lazy"
 	
 		alt="image-20251223042849103"
@@ -483,10 +483,10 @@
 	
 ></p>
 <h4 id="3xtaskresumefromisr">3.xTaskResumeFromISR()
-</h4><p><img src="/p/freertos/assets/image-20251223043507400.png"
+</h4><p><img src="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223043507400.png"
 	width="1518"
 	height="456"
-	srcset="/p/freertos/assets/image-20251223043507400_hu_9cf5101e3d19459f.png 480w, /p/freertos/assets/image-20251223043507400_hu_2a19188e0eeef431.png 1024w"
+	srcset="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223043507400_hu_9cf5101e3d19459f.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223043507400_hu_2a19188e0eeef431.png 1024w"
 	loading="lazy"
 	
 		alt="image-20251223043507400"
@@ -502,10 +502,10 @@
 </h3><p>ARM Cortex-M 使用8位宽的寄存器来配置中断的优先级，这个寄存器就是中断优先级配置寄存器</p>
 <p>但STM32，只用了中断优先级配置寄存器的高4位[7:4],所以STM32提供了最大16级的中断优先等级</p>
 <p>stm32的中断优先级分为抢占优先级与响应优先级、</p>
-<p><img src="/p/freertos/assets/image-20251223045315774.png"
+<p><img src="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223045315774.png"
 	width="1512"
 	height="199"
-	srcset="/p/freertos/assets/image-20251223045315774_hu_b96f75b2b328d8b1.png 480w, /p/freertos/assets/image-20251223045315774_hu_904b74ee1786e713.png 1024w"
+	srcset="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223045315774_hu_b96f75b2b328d8b1.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223045315774_hu_904b74ee1786e713.png 1024w"
 	loading="lazy"
 	
 		alt="image-20251223045315774"
@@ -554,10 +554,10 @@
 <h3 id="三个中断屏蔽寄存器">三个中断屏蔽寄存器
 </h3><p>分别为PRIMASK,FAULTMASK,ABSEPRI</p>
 <p>FreeRtos中断管理就是利用BASEPRI寄存器实现的</p>
-<p><img src="/p/freertos/assets/image-20251223053646442.png"
+<p><img src="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223053646442.png"
 	width="1333"
 	height="408"
-	srcset="/p/freertos/assets/image-20251223053646442_hu_3bc3d5c6ad4ab678.png 480w, /p/freertos/assets/image-20251223053646442_hu_ccdd3e29b899c9f.png 1024w"
+	srcset="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223053646442_hu_3bc3d5c6ad4ab678.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223053646442_hu_ccdd3e29b899c9f.png 1024w"
 	loading="lazy"
 	
 		alt="image-20251223053646442"
@@ -569,10 +569,10 @@
 	
 ></p>
 <p>BASEPRI设置为 0x50 左移4位前为0x05，所以中断优先级大于或等于5的均被屏蔽</p>
-<p><img src="/p/freertos/assets/image-20251223060510633.png"
+<p><img src="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223060510633.png"
 	width="611"
 	height="470"
-	srcset="/p/freertos/assets/image-20251223060510633_hu_1886ba4567e7c4ab.png 480w, /p/freertos/assets/image-20251223060510633_hu_bd7ca0abe3d7bf80.png 1024w"
+	srcset="/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223060510633_hu_1886ba4567e7c4ab.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223060510633_hu_bd7ca0abe3d7bf80.png 1024w"
 	loading="lazy"
 	
 		alt="image-20251223060510633"
@@ -669,6 +669,8 @@
     </section>
     
     <section class="powerby">
+        
+            记录嵌入式开发的点滴 <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.32.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
@@ -770,6 +772,31 @@
 
         document.head.appendChild(customFont);
     }());
+</script>
+<script>
+(function() {
+  
+  const bar = document.createElement('div');
+  bar.className = 'reading-progress';
+  document.body.prepend(bar);
+  
+  function updateBar() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight > 0) {
+      const progress = Math.min(scrollTop / docHeight * 100, 100);
+      bar.style.width = progress + '%';
+    }
+  }
+  
+  
+  if (document.body.classList.contains('article-page')) {
+    window.addEventListener('scroll', updateBar, { passive: true });
+    updateBar();
+  } else {
+    bar.remove();
+  }
+})();
 </script>
 
     </body>

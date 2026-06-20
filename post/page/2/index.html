@@ -4,15 +4,15 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="嵌入式、系统编程与开发笔记">
 <title>Posts</title>
 
-<link rel='canonical' href='https://blockpapers.github.io/post/'>
+<link rel='canonical' href='/post/'>
 
-<link rel="stylesheet" href="/scss/style.min.f4ab301160f861f446d31307ac777e3453804645bf4feaba76f74e0488b1c23a.css"><meta property='og:title' content="Posts">
+<link rel="stylesheet" href="/scss/style.min.fe5bc084e00ac4c1699fda406421394890d873332bdb56d3292900211fb8060a.css"><meta property='og:title' content="Posts">
 <meta property='og:description' content="嵌入式、系统编程与开发笔记">
-<meta property='og:url' content='https://blockpapers.github.io/post/'>
+<meta property='og:url' content='/post/'>
 <meta property='og:site_name' content='张工的知识库'>
 <meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-06-20T18:00:00&#43;08:00 '/>
 <meta name="twitter:title" content="Posts">
-<meta name="twitter:description" content="嵌入式、系统编程与开发笔记"><link rel="alternate" type="application/rss&#43;xml" href="https://blockpapers.github.io/post/index.xml">
+<meta name="twitter:description" content="嵌入式、系统编程与开发笔记"><link rel="alternate" type="application/rss&#43;xml" href="/post/index.xml">
     <link rel="shortcut icon" href="/favicon1.ico" />
 
     </head>
@@ -172,7 +172,7 @@
 
 
                 
-                <span>Archives</span>
+                <span>归档</span>
             </a>
         </li>
         
@@ -231,9 +231,9 @@
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="https://blockpapers.github.io/en/" >English</option>
+                                    <option value="/en/" >English</option>
                                 
-                                    <option value="https://blockpapers.github.io/" selected>中文</option>
+                                    <option value="/" selected>中文</option>
                                 
                             </select>
                         </li>
@@ -415,9 +415,9 @@
     <section class="article-list--compact">
         
             <article>
-    <a href="/p/bootloader/">
+    <a href="/p/bootloader-%E4%B8%8E-iap-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3/">
         <div class="article-details">
-            <h2 class="article-title">Bootloader</h2>
+            <h2 class="article-title">Bootloader 与 IAP 原理详解</h2>
             <footer class="article-time">
                 <time datetime='2025-12-09T20:29:09&#43;08:00'>2025-12-09</time>
             </footer>
@@ -426,9 +426,9 @@
 </article>
         
             <article>
-    <a href="/p/socket%E7%BC%96%E7%A8%8B/">
+    <a href="/p/socket-%E7%BC%96%E7%A8%8B%E5%8E%9F%E7%90%86%E4%B8%8E-tcp-%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B/">
         <div class="article-details">
-            <h2 class="article-title">Socket编程</h2>
+            <h2 class="article-title">Socket 编程原理与 TCP 通信流程</h2>
             <footer class="article-time">
                 <time datetime='2025-12-09T17:42:29&#43;08:00'>2025-12-09</time>
             </footer>
@@ -462,6 +462,8 @@
     </section>
     
     <section class="powerby">
+        
+            记录嵌入式开发的点滴 <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.32.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
@@ -485,6 +487,31 @@
 
         document.head.appendChild(customFont);
     }());
+</script>
+<script>
+(function() {
+  
+  const bar = document.createElement('div');
+  bar.className = 'reading-progress';
+  document.body.prepend(bar);
+  
+  function updateBar() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight > 0) {
+      const progress = Math.min(scrollTop / docHeight * 100, 100);
+      bar.style.width = progress + '%';
+    }
+  }
+  
+  
+  if (document.body.classList.contains('article-page')) {
+    window.addEventListener('scroll', updateBar, { passive: true });
+    updateBar();
+  } else {
+    bar.remove();
+  }
+})();
 </script>
 
     </body>

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on Example Site</title>
-        <link>https://blockpapers.github.io/en/categories/</link>
+        <link>/en/categories/</link>
         <description>Recent content in Categories on Example Site</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en</language>
-        <copyright>张工</copyright><atom:link href="https://blockpapers.github.io/en/categories/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>张工</copyright><atom:link href="/en/categories/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

@@ -4,15 +4,15 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Embedded systems and programming notes">
 <title>Tags</title>
 
-<link rel='canonical' href='https://blockpapers.github.io/en/tags/'>
+<link rel='canonical' href='/en/tags/'>
 
-<link rel="stylesheet" href="/scss/style.min.f4ab301160f861f446d31307ac777e3453804645bf4feaba76f74e0488b1c23a.css"><meta property='og:title' content="Tags">
+<link rel="stylesheet" href="/scss/style.min.fe5bc084e00ac4c1699fda406421394890d873332bdb56d3292900211fb8060a.css"><meta property='og:title' content="Tags">
 <meta property='og:description' content="Embedded systems and programming notes">
-<meta property='og:url' content='https://blockpapers.github.io/en/tags/'>
+<meta property='og:url' content='/en/tags/'>
 <meta property='og:site_name' content='Example Site'>
 <meta property='og:type' content='website'>
 <meta name="twitter:title" content="Tags">
-<meta name="twitter:description" content="Embedded systems and programming notes"><link rel="alternate" type="application/rss&#43;xml" href="https://blockpapers.github.io/en/tags/index.xml">
+<meta name="twitter:description" content="Embedded systems and programming notes"><link rel="alternate" type="application/rss&#43;xml" href="/en/tags/index.xml">
     <link rel="shortcut icon" href="/favicon1.ico" />
 
     </head>
@@ -69,7 +69,7 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/en">Example Site</a></h1>
+            <h1 class="site-name"><a href="/en/">Example Site</a></h1>
             <h2 class="site-description">Embedded systems and programming notes</h2>
         </div>
     </header><ol class="menu-social">
@@ -134,9 +134,9 @@
 
                             <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
                                 
-                                    <option value="https://blockpapers.github.io/en/" selected>English</option>
+                                    <option value="/en/" selected>English</option>
                                 
-                                    <option value="https://blockpapers.github.io/" >中文</option>
+                                    <option value="/" >中文</option>
                                 
                             </select>
                         </li>
@@ -257,6 +257,8 @@
     </section>
     
     <section class="powerby">
+        
+            记录嵌入式开发的点滴 <br/>
         Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
         Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.32.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
     </section>
@@ -280,6 +282,31 @@
 
         document.head.appendChild(customFont);
     }());
+</script>
+<script>
+(function() {
+  
+  const bar = document.createElement('div');
+  bar.className = 'reading-progress';
+  document.body.prepend(bar);
+  
+  function updateBar() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight > 0) {
+      const progress = Math.min(scrollTop / docHeight * 100, 100);
+      bar.style.width = progress + '%';
+    }
+  }
+  
+  
+  if (document.body.classList.contains('article-page')) {
+    window.addEventListener('scroll', updateBar, { passive: true });
+    updateBar();
+  } else {
+    bar.remove();
+  }
+})();
 </script>
 
     </body>

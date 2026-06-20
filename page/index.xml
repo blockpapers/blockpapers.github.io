@@ -2,42 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on 张工的知识库</title>
-        <link>https://blockpapers.github.io/page/</link>
+        <link>/page/</link>
         <description>Recent content in Pages on 张工的知识库</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <copyright>张工</copyright>
-        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blockpapers.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Archives</title>
-        <link>https://blockpapers.github.io/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://blockpapers.github.io/archives/</guid>
-        <description></description>
-        </item>
-        <item>
+        <copyright>张工</copyright><atom:link href="/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Search</title>
-        <link>https://blockpapers.github.io/search/</link>
+        <link>/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blockpapers.github.io/search/</guid>
+        <guid>/search/</guid>
         <description></description>
         </item>
         <item>
         <title>关于</title>
-        <link>https://blockpapers.github.io/%E5%85%B3%E4%BA%8E/</link>
+        <link>/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blockpapers.github.io/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
+        <guid>/%E5%85%B3%E4%BA%8E/</guid>
+        <description>&lt;h2 id=&#34;关于我&#34;&gt;关于我
+&lt;/h2&gt;&lt;p&gt;嵌入式软件工程师，专注于嵌入式系统开发、RTOS、Bootloader、网络编程等底层技术方向。&lt;/p&gt;
+&lt;p&gt;这个博客是我日常开发和调试过程中的笔记沉淀。&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>技术链接</title>
-        <link>https://blockpapers.github.io/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</link>
+        <title>归档</title>
+        <link>/archives/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blockpapers.github.io/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</guid>
+        <guid>/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>技术链接</title>
+        <link>/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/</guid>
         <description></description>
         </item>
         

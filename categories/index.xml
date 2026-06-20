@@ -2,26 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on 张工的知识库</title>
-        <link>https://blockpapers.github.io/categories/</link>
+        <link>/categories/</link>
         <description>Recent content in Categories on 张工的知识库</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>张工</copyright>
-        <lastBuildDate>Sat, 20 Jun 2026 18:00:00 +0800</lastBuildDate><atom:link href="https://blockpapers.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 20 Jun 2026 18:00:00 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>AI工具</title>
-        <link>https://blockpapers.github.io/categories/ai%E5%B7%A5%E5%85%B7/</link>
+        <link>/categories/ai%E5%B7%A5%E5%85%B7/</link>
         <pubDate>Sat, 20 Jun 2026 18:00:00 +0800</pubDate>
         
-        <guid>https://blockpapers.github.io/categories/ai%E5%B7%A5%E5%85%B7/</guid>
+        <guid>/categories/ai%E5%B7%A5%E5%85%B7/</guid>
         <description></description>
-        </item>
-        <item>
-        <title>Test</title>
-        <link>https://blockpapers.github.io/categories/test/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blockpapers.github.io/categories/test/</guid>
-        <description>&lt;img src="https://blockpapers.github.io/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
         
     </channel>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on 张工的知识库</title>
-        <link>https://blockpapers.github.io/post/</link>
+        <link>/post/</link>
         <description>Recent content in Posts on 张工的知识库</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>张工</copyright>
-        <lastBuildDate>Sat, 20 Jun 2026 18:00:00 +0800</lastBuildDate><atom:link href="https://blockpapers.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 20 Jun 2026 18:00:00 +0800</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>保姆级教程 | CC Switch 让 Codex 自由换模型</title>
-        <link>https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/</link>
+        <link>/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/</link>
         <pubDate>Sat, 20 Jun 2026 18:00:00 +0800</pubDate>
         
-        <guid>https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/</guid>
-        <description>&lt;img src="https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg" alt="Featured image of post 保姆级教程 | CC Switch 让 Codex 自由换模型" /&gt;&lt;p&gt;Codex 现在热度很高，用的人不少，毕竟封号没像另外一家频繁，但对于重度用户来说，额度和成本依然是绕不开的问题。&lt;/p&gt;
+        <guid>/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/</guid>
+        <description>&lt;img src="/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg" alt="Featured image of post 保姆级教程 | CC Switch 让 Codex 自由换模型" /&gt;&lt;p&gt;Codex 现在热度很高，用的人不少，毕竟封号没像另外一家频繁，但对于重度用户来说，额度和成本依然是绕不开的问题。&lt;/p&gt;
 &lt;p&gt;之前配置接入第三方模型也不方便，现在好了，第三方工具 &lt;strong&gt;CC Switch v3.16.0&lt;/strong&gt; 更新后，已经可以很方便的把第三方模型接入 Codex。&lt;/p&gt;
 &lt;p&gt;CC Switch 是一款免费开源的跨平台桌面工具，它能够在本地接管 Codex 等 AI 编程助手的请求，并将请求转发到你指定的 API 提供商，实现模型自由切换。&lt;/p&gt;
 &lt;p&gt;通过 CC Switch，你可以让 Codex 直接使用 &lt;strong&gt;DeepSeek、Qwen、智谱 GLM&lt;/strong&gt; 等第三方大模型作为后端服务，在保留 Codex 使用体验的同时，大幅降低使用成本，并获得更多模型选择。&lt;/p&gt;
@@ -29,10 +29,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Codex → CC Switch → DeepSeek/Qwen/GLM → CC Switch → Codex
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg&#34;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;720&#34;
-	srcset=&#34;https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_18ad5b335e467016.jpg 480w, https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_85c787112894a967.jpg 1024w&#34;
+	srcset=&#34;/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_18ad5b335e467016.jpg 480w, /p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_85c787112894a967.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;CC Switch 工作流程&#34;
@@ -168,11 +168,11 @@
 </description>
         </item>
         <item>
-        <title>git命令</title>
-        <link>https://blockpapers.github.io/p/git%E5%91%BD%E4%BB%A4/</link>
+        <title>Git 常用指令整理（分类版）</title>
+        <link>/p/git-%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E6%95%B4%E7%90%86%E5%88%86%E7%B1%BB%E7%89%88/</link>
         <pubDate>Tue, 07 Apr 2026 00:23:24 +0800</pubDate>
         
-        <guid>https://blockpapers.github.io/p/git%E5%91%BD%E4%BB%A4/</guid>
+        <guid>/p/git-%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4%E6%95%B4%E7%90%86%E5%88%86%E7%B1%BB%E7%89%88/</guid>
         <description>&lt;h1 id=&#34;git-常用指令整理分类版&#34;&gt;Git 常用指令整理（分类版）
 &lt;/h1&gt;&lt;hr&gt;
 &lt;h2 id=&#34;一仓库初始化与配置&#34;&gt;一、仓库初始化与配置
@@ -644,25 +644,24 @@
 &lt;li&gt;远程仓库 → 本地：git pull / git fetch&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;如果需要，我可以帮你再做一份「流程图图片版」或者「企业开发规范版（含分支策略）」。&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Freertos</title>
-        <link>https://blockpapers.github.io/p/freertos/</link>
+        <title>FreeRTOS 任务管理笔记</title>
+        <link>/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Tue, 16 Dec 2025 22:29:03 +0800</pubDate>
         
-        <guid>https://blockpapers.github.io/p/freertos/</guid>
+        <guid>/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/</guid>
         <description>&lt;h2 id=&#34;第9讲-任务的创建&#34;&gt;第9讲 任务的创建
 &lt;/h2&gt;&lt;p&gt;一.创建任务&lt;/p&gt;
 &lt;p&gt;1.动态创建任务	xTaskCreate()	任务的任务控制块以及任务的栈空间所需的内存，均由FreeRTos从管理的堆中分配&lt;/p&gt;
 &lt;p&gt;2.静态创建任务	xTaskCreateStatic()  任务的任务控制块以及任务的栈空间所需的内存，需由用户分配&lt;/p&gt;
 &lt;p&gt;3.删除任务		vTaskDelete()&lt;/p&gt;
 &lt;p&gt;动态创建函数&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251216223548513.png&#34;
+&lt;p&gt;&lt;img src=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251216223548513.png&#34;
 	width=&#34;1802&#34;
 	height=&#34;454&#34;
-	srcset=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251216223548513_hu_d878e41416a14a42.png 480w, https://blockpapers.github.io/p/freertos/assets/image-20251216223548513_hu_886b812b549ed4ba.png 1024w&#34;
+	srcset=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251216223548513_hu_d878e41416a14a42.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251216223548513_hu_886b812b549ed4ba.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251216223548513&#34;
@@ -717,10 +716,10 @@
 &lt;p&gt;&lt;strong&gt;第二层：FreeRTOS 托管区（优先级 5 - 14）—— 老师说的就是这里 含义：中等优先级范围。 特点：这些中断可以被 FreeRTOS 的“临界区”机制屏蔽（Mask）。 规则：可以安全地调用以 FromISR 结尾的 API 函数（如 xQueueSendFromISR）。 原理：当 FreeRTOS 需要保护核心数据结构时，它会把 CPU 的中断屏蔽寄存器（BASEPRI）设为 5。这意味着，优先级在 5 到 15 的中断暂时会被“关”在外面，直到 FreeRTOS 处理完数据。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第三层：内核地板区（优先级 15） 含义：最低优先级。 谁在这里：FreeRTOS 的 PendSV（任务切换）和 SysTick（时钟节拍）。 规则：这是内核干活的地方。&lt;/strong&gt;&lt;/p&gt;
 &lt;h3 id=&#34;第14讲-任务挂起与恢复实验&#34;&gt;第14讲 任务挂起与恢复实验
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223000242002.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223000242002.png&#34;
 	width=&#34;1614&#34;
 	height=&#34;590&#34;
-	srcset=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223000242002_hu_bd564d3ba6807ecf.png 480w, https://blockpapers.github.io/p/freertos/assets/image-20251223000242002_hu_6ca4c6bfeb590994.png 1024w&#34;
+	srcset=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223000242002_hu_bd564d3ba6807ecf.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223000242002_hu_6ca4c6bfeb590994.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251223000242002&#34;
@@ -735,10 +734,10 @@
 &lt;p&gt;2.中断处理函数的抢占优先级要小于或等于freeRtos所管理的最大优先级（5-15）&lt;/p&gt;
 &lt;h3 id=&#34;第15讲-任务挂起与恢复函数实现的详细过程&#34;&gt;第15讲 任务挂起与恢复函数实现的详细过程
 &lt;/h3&gt;&lt;h4 id=&#34;1任务挂起流程图--vtasksuspend&#34;&gt;1.任务挂起流程图  vTaskSuspend()
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223014059901.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223014059901.png&#34;
 	width=&#34;1602&#34;
 	height=&#34;408&#34;
-	srcset=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223014059901_hu_db29903f4644cf11.png 480w, https://blockpapers.github.io/p/freertos/assets/image-20251223014059901_hu_18f5afee3cc21d88.png 1024w&#34;
+	srcset=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223014059901_hu_db29903f4644cf11.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223014059901_hu_18f5afee3cc21d88.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251223014059901&#34;
@@ -750,10 +749,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;2任务恢复函数详情vtaskresume&#34;&gt;2.任务恢复函数详情	vTaskResume()
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223042849103.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223042849103.png&#34;
 	width=&#34;1005&#34;
 	height=&#34;184&#34;
-	srcset=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223042849103_hu_9aa9f64f882d17d0.png 480w, https://blockpapers.github.io/p/freertos/assets/image-20251223042849103_hu_cc39212ced31f2e5.png 1024w&#34;
+	srcset=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223042849103_hu_9aa9f64f882d17d0.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223042849103_hu_cc39212ced31f2e5.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251223042849103&#34;
@@ -765,10 +764,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;3xtaskresumefromisr&#34;&gt;3.xTaskResumeFromISR()
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223043507400.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223043507400.png&#34;
 	width=&#34;1518&#34;
 	height=&#34;456&#34;
-	srcset=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223043507400_hu_9cf5101e3d19459f.png 480w, https://blockpapers.github.io/p/freertos/assets/image-20251223043507400_hu_2a19188e0eeef431.png 1024w&#34;
+	srcset=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223043507400_hu_9cf5101e3d19459f.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223043507400_hu_2a19188e0eeef431.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251223043507400&#34;
@@ -784,10 +783,10 @@
 &lt;/h3&gt;&lt;p&gt;ARM Cortex-M 使用8位宽的寄存器来配置中断的优先级，这个寄存器就是中断优先级配置寄存器&lt;/p&gt;
 &lt;p&gt;但STM32，只用了中断优先级配置寄存器的高4位[7:4],所以STM32提供了最大16级的中断优先等级&lt;/p&gt;
 &lt;p&gt;stm32的中断优先级分为抢占优先级与响应优先级、&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223045315774.png&#34;
+&lt;p&gt;&lt;img src=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223045315774.png&#34;
 	width=&#34;1512&#34;
 	height=&#34;199&#34;
-	srcset=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223045315774_hu_b96f75b2b328d8b1.png 480w, https://blockpapers.github.io/p/freertos/assets/image-20251223045315774_hu_904b74ee1786e713.png 1024w&#34;
+	srcset=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223045315774_hu_b96f75b2b328d8b1.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223045315774_hu_904b74ee1786e713.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251223045315774&#34;
@@ -836,10 +835,10 @@
 &lt;h3 id=&#34;三个中断屏蔽寄存器&#34;&gt;三个中断屏蔽寄存器
 &lt;/h3&gt;&lt;p&gt;分别为PRIMASK,FAULTMASK,ABSEPRI&lt;/p&gt;
 &lt;p&gt;FreeRtos中断管理就是利用BASEPRI寄存器实现的&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223053646442.png&#34;
+&lt;p&gt;&lt;img src=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223053646442.png&#34;
 	width=&#34;1333&#34;
 	height=&#34;408&#34;
-	srcset=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223053646442_hu_3bc3d5c6ad4ab678.png 480w, https://blockpapers.github.io/p/freertos/assets/image-20251223053646442_hu_ccdd3e29b899c9f.png 1024w&#34;
+	srcset=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223053646442_hu_3bc3d5c6ad4ab678.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223053646442_hu_ccdd3e29b899c9f.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251223053646442&#34;
@@ -851,10 +850,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;BASEPRI设置为 0x50 左移4位前为0x05，所以中断优先级大于或等于5的均被屏蔽&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223060510633.png&#34;
+&lt;p&gt;&lt;img src=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223060510633.png&#34;
 	width=&#34;611&#34;
 	height=&#34;470&#34;
-	srcset=&#34;https://blockpapers.github.io/p/freertos/assets/image-20251223060510633_hu_1886ba4567e7c4ab.png 480w, https://blockpapers.github.io/p/freertos/assets/image-20251223060510633_hu_bd7ca0abe3d7bf80.png 1024w&#34;
+	srcset=&#34;/p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223060510633_hu_1886ba4567e7c4ab.png 480w, /p/freertos-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E7%AC%94%E8%AE%B0/assets/image-20251223060510633_hu_bd7ca0abe3d7bf80.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20251223060510633&#34;
@@ -922,11 +921,11 @@
 </description>
         </item>
         <item>
-        <title>Bootloader</title>
-        <link>https://blockpapers.github.io/p/bootloader/</link>
+        <title>Bootloader 与 IAP 原理详解</title>
+        <link>/p/bootloader-%E4%B8%8E-iap-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3/</link>
         <pubDate>Tue, 09 Dec 2025 20:29:09 +0800</pubDate>
         
-        <guid>https://blockpapers.github.io/p/bootloader/</guid>
+        <guid>/p/bootloader-%E4%B8%8E-iap-%E5%8E%9F%E7%90%86%E8%AF%A6%E8%A7%A3/</guid>
         <description>&lt;p&gt;STM32编程方式：&lt;/p&gt;
 &lt;p&gt;1.在线编程（ICP，In-Circuit Programming）：用户通过烧录器将用户应用程序下载到flash中&lt;/p&gt;
 &lt;p&gt;2.在程序中编程（IAP In Application Programming）：在应用程序中重新烧录程序&lt;/p&gt;
@@ -978,11 +977,11 @@
 </description>
         </item>
         <item>
-        <title>Socket编程</title>
-        <link>https://blockpapers.github.io/p/socket%E7%BC%96%E7%A8%8B/</link>
+        <title>Socket 编程原理与 TCP 通信流程</title>
+        <link>/p/socket-%E7%BC%96%E7%A8%8B%E5%8E%9F%E7%90%86%E4%B8%8E-tcp-%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B/</link>
         <pubDate>Tue, 09 Dec 2025 17:42:29 +0800</pubDate>
         
-        <guid>https://blockpapers.github.io/p/socket%E7%BC%96%E7%A8%8B/</guid>
+        <guid>/p/socket-%E7%BC%96%E7%A8%8B%E5%8E%9F%E7%90%86%E4%B8%8E-tcp-%E9%80%9A%E4%BF%A1%E6%B5%81%E7%A8%8B/</guid>
         <description>&lt;h2 id=&#34;网络协议--tcpip&#34;&gt;网络协议 : TCP/IP
 &lt;/h2&gt;&lt;img src=&#34;assets/image-20251209174437508.png&#34; alt=&#34;image-20251209174437508&#34; style=&#34;zoom: 67%;&#34; /&gt;
 &lt;p&gt;1.应用层：为用户提供网络服务&lt;/p&gt;
