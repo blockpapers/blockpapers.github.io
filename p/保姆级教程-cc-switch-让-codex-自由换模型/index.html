@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Codex 现在热度很高，用的人不少，毕竟封号没像另外一家频繁，但对于重度用户来说，额度和成本依然是绕不开的问题。\n之前配置接入第三方模型也不方便，现在好了，第三方工具 CC Switch v3.16.0 更新后，已经可以很方便的把第三方模型接入 Codex。\n">
+<title>保姆级教程 | CC Switch 让 Codex 自由换模型</title>
+
+<link rel='canonical' href='https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/'>
+
+<link rel="stylesheet" href="/scss/style.min.76873e18b27371303ec4ea1ad57e8ee11997cb60d9c749073234314387cb6e6e.css"><meta property='og:title' content="保姆级教程 | CC Switch 让 Codex 自由换模型">
+<meta property='og:description' content="Codex 现在热度很高，用的人不少，毕竟封号没像另外一家频繁，但对于重度用户来说，额度和成本依然是绕不开的问题。\n之前配置接入第三方模型也不方便，现在好了，第三方工具 CC Switch v3.16.0 更新后，已经可以很方便的把第三方模型接入 Codex。\n">
+<meta property='og:url' content='https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/'>
+<meta property='og:site_name' content='张工的知识库'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Codex' /><meta property='article:tag' content='CC-Switch' /><meta property='article:tag' content='AI编程' /><meta property='article:tag' content='DeepSeek' /><meta property='article:published_time' content='2026-06-20T18:00:00&#43;08:00'/><meta property='article:modified_time' content='2026-06-20T18:00:00&#43;08:00'/><meta property='og:image' content='https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg' />
+<meta name="twitter:title" content="保姆级教程 | CC Switch 让 Codex 自由换模型">
+<meta name="twitter:description" content="Codex 现在热度很高，用的人不少，毕竟封号没像另外一家频繁，但对于重度用户来说，额度和成本依然是绕不开的问题。\n之前配置接入第三方模型也不方便，现在好了，第三方工具 CC Switch v3.16.0 更新后，已经可以很方便的把第三方模型接入 Codex。\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg' />
+    <link rel="shortcut icon" href="/favicon1.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_b3e91363bf370912.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😎</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">张工的知识库</a></h1>
+            <h2 class="site-description">嵌入式、系统编程与开发笔记</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E6%8A%80%E6%9C%AF%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>技术链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://blockpapers.github.io/en/" >English</option>
+                                
+                                    <option value="https://blockpapers.github.io/" selected>中文</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#工作原理">工作原理</a></li>
+    <li><a href="#前置条件">前置条件</a></li>
+    <li><a href="#第一步安装-cc-switch">第一步：安装 CC Switch</a>
+      <ol>
+        <li><a href="#macos">macOS</a></li>
+        <li><a href="#windows">Windows</a></li>
+        <li><a href="#linux">Linux</a></li>
+      </ol>
+    </li>
+    <li><a href="#第二步添加-deepseek-提供商">第二步：添加 DeepSeek 提供商</a></li>
+    <li><a href="#第三步开启路由">第三步：开启路由</a></li>
+    <li><a href="#完成">完成</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/">
+                <img src="/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_dffceed5d5d685c5.jpg"
+                        srcset="/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_dffceed5d5d685c5.jpg 800w, /p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_a9c387038f393df9.jpg 1600w"
+                        width="800" 
+                        height="533" 
+                        loading="lazy"
+                        alt="Featured image of post 保姆级教程 | CC Switch 让 Codex 自由换模型" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ai%E5%B7%A5%E5%85%B7/" >
+                AI工具
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/">保姆级教程 | CC Switch 让 Codex 自由换模型</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published" datetime='2026-06-20T18:00:00&#43;08:00'>2026-06-20</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Codex 现在热度很高，用的人不少，毕竟封号没像另外一家频繁，但对于重度用户来说，额度和成本依然是绕不开的问题。</p>
+<p>之前配置接入第三方模型也不方便，现在好了，第三方工具 <strong>CC Switch v3.16.0</strong> 更新后，已经可以很方便的把第三方模型接入 Codex。</p>
+<p>CC Switch 是一款免费开源的跨平台桌面工具，它能够在本地接管 Codex 等 AI 编程助手的请求，并将请求转发到你指定的 API 提供商，实现模型自由切换。</p>
+<p>通过 CC Switch，你可以让 Codex 直接使用 <strong>DeepSeek、Qwen、智谱 GLM</strong> 等第三方大模型作为后端服务，在保留 Codex 使用体验的同时，大幅降低使用成本，并获得更多模型选择。</p>
+<p>接下来我们基于 CC Switch v3.16.0，演示如何为 Codex 配置 DeepSeek 作为后端模型，其他兼容模型的配置方式也基本类似。</p>
+<h2 id="工作原理">工作原理
+</h2><p>CC Switch 会在本机启动一个轻量级代理服务。</p>
+<p>当 Codex 发起请求时：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Codex → CC Switch → DeepSeek/Qwen/GLM → CC Switch → Codex
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg"
+	width="1080"
+	height="720"
+	srcset="/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_18ad5b335e467016.jpg 480w, /p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_85c787112894a967.jpg 1024w"
+	loading="lazy"
+	
+		alt="CC Switch 工作流程"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="360px"
+	
+></p>
+<p>整个转发过程完全透明，对于 Codex 来说，它仍然认为自己正在访问 OpenAI 官方接口，而实际上，请求已经被 CC Switch 转发到了你指定的第三方模型服务。</p>
+<p>这样就实现了：</p>
+<ul>
+<li>保持原有 Codex 使用体验</li>
+<li>自由切换模型提供商</li>
+<li>降低 API 使用成本</li>
+<li>避免频繁修改配置文件</li>
+</ul>
+<h2 id="前置条件">前置条件
+</h2><p>开始之前，请确认已准备好以下环境：</p>
+<div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>条件</th>
+					<th>说明</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Codex 已安装</td>
+					<td>下载并安装 Codex</td>
+			</tr>
+			<tr>
+					<td>DeepSeek API Key</td>
+					<td>在 DeepSeek 开放平台注册获取</td>
+			</tr>
+			<tr>
+					<td>操作系统</td>
+					<td>Windows 10+、macOS 12+、主流 Linux 发行版</td>
+			</tr>
+			<tr>
+					<td>CC Switch</td>
+					<td>建议使用 v3.16.0 或更高版本</td>
+			</tr>
+	</tbody>
+</table></div>
+<h2 id="第一步安装-cc-switch">第一步：安装 CC Switch
+</h2><p>安装包下载地址为 <a class="link" href="https://github.com/farion1231/cc-switch/releases/latest"  target="_blank" rel="noopener"
+    >GitHub Releases</a>，根据你的操作系统选择对应的安装方式。</p>
+<h3 id="macos">macOS
+</h3><p>macOS 版本已通过公证，可直接使用 Homebrew 安装：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">brew install cc-switch
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="windows">Windows
+</h3><p>从 GitHub Releases 下载 <code>.msi</code> 安装包，双击运行即可。</p>
+<h3 id="linux">Linux
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dpkg -i CC-Switch-*.deb
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其他发行版安装方式：</p>
+<div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>发行版</th>
+					<th>推荐格式</th>
+					<th>安装方式</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Ubuntu / Debian / Linux Mint</td>
+					<td><code>.deb</code></td>
+					<td><code>sudo dpkg -i CC-Switch-*.deb</code></td>
+			</tr>
+			<tr>
+					<td>Fedora / RHEL / CentOS</td>
+					<td><code>.rpm</code></td>
+					<td><code>sudo rpm -i CC-Switch-*.rpm</code></td>
+			</tr>
+			<tr>
+					<td>openSUSE</td>
+					<td><code>.rpm</code></td>
+					<td><code>sudo zypper install ./CC-Switch-*.rpm</code></td>
+			</tr>
+			<tr>
+					<td>Arch Linux / Manjaro</td>
+					<td><code>.AppImage</code></td>
+					<td>添加执行权限后直接运行</td>
+			</tr>
+			<tr>
+					<td>其他发行版</td>
+					<td><code>.AppImage</code></td>
+					<td><code>chmod +x CC-Switch-*.AppImage &amp;&amp; ./CC-Switch-*.AppImage</code></td>
+			</tr>
+	</tbody>
+</table></div>
+<p>安装完成后启动 CC Switch，主界面会出现在桌面或系统托盘。</p>
+<h2 id="第二步添加-deepseek-提供商">第二步：添加 DeepSeek 提供商
+</h2><p>在 CC Switch 中添加 DeepSeek 作为 API 提供商：</p>
+<ol>
+<li>打开 CC Switch，在顶部应用切换栏选择 <strong>Codex</strong></li>
+<li>点击左侧 <strong>Providers</strong> 区域的 <strong>+ Add Provider</strong></li>
+<li>在预设列表中搜索 <strong>DeepSeek</strong>，选择对应的预设（v3.16.0 已内置 DeepSeek V4 flash 和 pro 两个版本）</li>
+<li>在表单中填入你的 <strong>DeepSeek API Key</strong>，其余字段使用默认值即可</li>
+<li>开启本地路由映射，点击 <strong>保存</strong></li>
+</ol>
+<h2 id="第三步开启路由">第三步：开启路由
+</h2><p>切换到 DeepSeek 后，系统会提示开启路由：</p>
+<ol>
+<li>点击左上角的 <strong>设置</strong> 按钮</li>
+<li>进入 <strong>路由设置</strong> 菜单</li>
+<li><strong>开启路由</strong></li>
+<li>选择 <strong>Codex</strong></li>
+</ol>
+<h2 id="完成">完成
+</h2><p>重新打开 Codex，就可以看到 DeepSeek 的模型标志了。现在你的 Codex 已经通过 CC Switch 接入了 DeepSeek 模型，可以享受更低的使用成本和更多的模型选择。</p>
+<hr>
+<blockquote>
+<p>本文转载自知乎专栏「大模型技术」，作者：大模型爱好者社区</p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/codex/">Codex</a>
+        
+            <a href="/tags/cc-switch/">CC-Switch</a>
+        
+            <a href="/tags/ai%E7%BC%96%E7%A8%8B/">AI编程</a>
+        
+            <a href="/tags/deepseek/">DeepSeek</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2026 张工
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.32.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.c922af694cc257bf1ecc41c0dd7b0430f9114ec280ccf67cd2c6ad55f5316c4e.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

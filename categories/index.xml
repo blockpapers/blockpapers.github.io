@@ -6,7 +6,16 @@
         <description>Recent content in Categories on 张工的知识库</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <copyright>张工</copyright><atom:link href="https://blockpapers.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>张工</copyright>
+        <lastBuildDate>Sat, 20 Jun 2026 18:00:00 +0800</lastBuildDate><atom:link href="https://blockpapers.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AI工具</title>
+        <link>https://blockpapers.github.io/categories/ai%E5%B7%A5%E5%85%B7/</link>
+        <pubDate>Sat, 20 Jun 2026 18:00:00 +0800</pubDate>
+        
+        <guid>https://blockpapers.github.io/categories/ai%E5%B7%A5%E5%85%B7/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Test</title>
         <link>https://blockpapers.github.io/categories/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -7,7 +7,166 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>张工</copyright>
-        <lastBuildDate>Tue, 07 Apr 2026 00:23:24 +0800</lastBuildDate><atom:link href="https://blockpapers.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 20 Jun 2026 18:00:00 +0800</lastBuildDate><atom:link href="https://blockpapers.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>保姆级教程 | CC Switch 让 Codex 自由换模型</title>
+        <link>https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/</link>
+        <pubDate>Sat, 20 Jun 2026 18:00:00 +0800</pubDate>
+        
+        <guid>https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/</guid>
+        <description>&lt;img src="https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg" alt="Featured image of post 保姆级教程 | CC Switch 让 Codex 自由换模型" /&gt;&lt;p&gt;Codex 现在热度很高，用的人不少，毕竟封号没像另外一家频繁，但对于重度用户来说，额度和成本依然是绕不开的问题。&lt;/p&gt;
+&lt;p&gt;之前配置接入第三方模型也不方便，现在好了，第三方工具 &lt;strong&gt;CC Switch v3.16.0&lt;/strong&gt; 更新后，已经可以很方便的把第三方模型接入 Codex。&lt;/p&gt;
+&lt;p&gt;CC Switch 是一款免费开源的跨平台桌面工具，它能够在本地接管 Codex 等 AI 编程助手的请求，并将请求转发到你指定的 API 提供商，实现模型自由切换。&lt;/p&gt;
+&lt;p&gt;通过 CC Switch，你可以让 Codex 直接使用 &lt;strong&gt;DeepSeek、Qwen、智谱 GLM&lt;/strong&gt; 等第三方大模型作为后端服务，在保留 Codex 使用体验的同时，大幅降低使用成本，并获得更多模型选择。&lt;/p&gt;
+&lt;p&gt;接下来我们基于 CC Switch v3.16.0，演示如何为 Codex 配置 DeepSeek 作为后端模型，其他兼容模型的配置方式也基本类似。&lt;/p&gt;
+&lt;h2 id=&#34;工作原理&#34;&gt;工作原理
+&lt;/h2&gt;&lt;p&gt;CC Switch 会在本机启动一个轻量级代理服务。&lt;/p&gt;
+&lt;p&gt;当 Codex 发起请求时：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Codex → CC Switch → DeepSeek/Qwen/GLM → CC Switch → Codex
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover.jpg&#34;
+	width=&#34;1080&#34;
+	height=&#34;720&#34;
+	srcset=&#34;https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_18ad5b335e467016.jpg 480w, https://blockpapers.github.io/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/assets/cover_hu_85c787112894a967.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;CC Switch 工作流程&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;整个转发过程完全透明，对于 Codex 来说，它仍然认为自己正在访问 OpenAI 官方接口，而实际上，请求已经被 CC Switch 转发到了你指定的第三方模型服务。&lt;/p&gt;
+&lt;p&gt;这样就实现了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;保持原有 Codex 使用体验&lt;/li&gt;
+&lt;li&gt;自由切换模型提供商&lt;/li&gt;
+&lt;li&gt;降低 API 使用成本&lt;/li&gt;
+&lt;li&gt;避免频繁修改配置文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;前置条件&#34;&gt;前置条件
+&lt;/h2&gt;&lt;p&gt;开始之前，请确认已准备好以下环境：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;条件&lt;/th&gt;
+					&lt;th&gt;说明&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Codex 已安装&lt;/td&gt;
+					&lt;td&gt;下载并安装 Codex&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;DeepSeek API Key&lt;/td&gt;
+					&lt;td&gt;在 DeepSeek 开放平台注册获取&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;操作系统&lt;/td&gt;
+					&lt;td&gt;Windows 10+、macOS 12+、主流 Linux 发行版&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;CC Switch&lt;/td&gt;
+					&lt;td&gt;建议使用 v3.16.0 或更高版本&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;第一步安装-cc-switch&#34;&gt;第一步：安装 CC Switch
+&lt;/h2&gt;&lt;p&gt;安装包下载地址为 &lt;a class=&#34;link&#34; href=&#34;https://github.com/farion1231/cc-switch/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub Releases&lt;/a&gt;，根据你的操作系统选择对应的安装方式。&lt;/p&gt;
+&lt;h3 id=&#34;macos&#34;&gt;macOS
+&lt;/h3&gt;&lt;p&gt;macOS 版本已通过公证，可直接使用 Homebrew 安装：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install cc-switch
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;windows&#34;&gt;Windows
+&lt;/h3&gt;&lt;p&gt;从 GitHub Releases 下载 &lt;code&gt;.msi&lt;/code&gt; 安装包，双击运行即可。&lt;/p&gt;
+&lt;h3 id=&#34;linux&#34;&gt;Linux
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo dpkg -i CC-Switch-*.deb
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;其他发行版安装方式：&lt;/p&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;发行版&lt;/th&gt;
+					&lt;th&gt;推荐格式&lt;/th&gt;
+					&lt;th&gt;安装方式&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Ubuntu / Debian / Linux Mint&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;.deb&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;sudo dpkg -i CC-Switch-*.deb&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Fedora / RHEL / CentOS&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;.rpm&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;sudo rpm -i CC-Switch-*.rpm&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;openSUSE&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;.rpm&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;sudo zypper install ./CC-Switch-*.rpm&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Arch Linux / Manjaro&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;.AppImage&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;添加执行权限后直接运行&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;其他发行版&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;.AppImage&lt;/code&gt;&lt;/td&gt;
+					&lt;td&gt;&lt;code&gt;chmod +x CC-Switch-*.AppImage &amp;amp;&amp;amp; ./CC-Switch-*.AppImage&lt;/code&gt;&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;安装完成后启动 CC Switch，主界面会出现在桌面或系统托盘。&lt;/p&gt;
+&lt;h2 id=&#34;第二步添加-deepseek-提供商&#34;&gt;第二步：添加 DeepSeek 提供商
+&lt;/h2&gt;&lt;p&gt;在 CC Switch 中添加 DeepSeek 作为 API 提供商：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 CC Switch，在顶部应用切换栏选择 &lt;strong&gt;Codex&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;点击左侧 &lt;strong&gt;Providers&lt;/strong&gt; 区域的 &lt;strong&gt;+ Add Provider&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;在预设列表中搜索 &lt;strong&gt;DeepSeek&lt;/strong&gt;，选择对应的预设（v3.16.0 已内置 DeepSeek V4 flash 和 pro 两个版本）&lt;/li&gt;
+&lt;li&gt;在表单中填入你的 &lt;strong&gt;DeepSeek API Key&lt;/strong&gt;，其余字段使用默认值即可&lt;/li&gt;
+&lt;li&gt;开启本地路由映射，点击 &lt;strong&gt;保存&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;第三步开启路由&#34;&gt;第三步：开启路由
+&lt;/h2&gt;&lt;p&gt;切换到 DeepSeek 后，系统会提示开启路由：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击左上角的 &lt;strong&gt;设置&lt;/strong&gt; 按钮&lt;/li&gt;
+&lt;li&gt;进入 &lt;strong&gt;路由设置&lt;/strong&gt; 菜单&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开启路由&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;选择 &lt;strong&gt;Codex&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;完成&#34;&gt;完成
+&lt;/h2&gt;&lt;p&gt;重新打开 Codex，就可以看到 DeepSeek 的模型标志了。现在你的 Codex 已经通过 CC Switch 接入了 DeepSeek 模型，可以享受更低的使用成本和更多的模型选择。&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文转载自知乎专栏「大模型技术」，作者：大模型爱好者社区&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>git命令</title>
         <link>https://blockpapers.github.io/p/git%E5%91%BD%E4%BB%A4/</link>
         <pubDate>Tue, 07 Apr 2026 00:23:24 +0800</pubDate>
