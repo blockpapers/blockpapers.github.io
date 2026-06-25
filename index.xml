@@ -7,7 +7,15 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>张工</copyright>
-        <lastBuildDate>Sat, 20 Jun 2026 18:00:00 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 25 Jun 2026 20:30:00 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+        <title>Git 代理配置与推送记录</title>
+        <link>/p/git-%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%8E%A8%E9%80%81%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Thu, 25 Jun 2026 20:30:00 +0800</pubDate>
+        
+        <guid>/p/git-%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE%E4%B8%8E%E6%8E%A8%E9%80%81%E8%AE%B0%E5%BD%95/</guid>
+        <description>记录一次把 Git 旧代理清空并改成 127.0.0.1:7890 后成功推送到 GitHub 的过程，包含排查思路和可直接复用的命令。 git config --global --unset-all http.proxy git config --global --unset-all https.proxy git config --global http.proxy http://127.0.0.1:7890 git config --global https.proxy http://127.0.0.1:7890 git -c http.version=HTTP/1.1 push -u origin main</description>
+        </item><item>
         <title>保姆级教程 | CC Switch 让 Codex 自由换模型</title>
         <link>/p/%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B-cc-switch-%E8%AE%A9-codex-%E8%87%AA%E7%94%B1%E6%8D%A2%E6%A8%A1%E5%9E%8B/</link>
         <pubDate>Sat, 20 Jun 2026 18:00:00 +0800</pubDate>
